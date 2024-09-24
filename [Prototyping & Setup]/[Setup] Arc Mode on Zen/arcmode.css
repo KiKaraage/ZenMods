@@ -28,6 +28,12 @@
   #unified-extensions-button {
     list-style-image: url('./arc-splitview.svg') !important;
   }
+  @media (-moz-bool-pref: "zen.tabs.vertical") {
+  #TabsToolbar-customization-target {
+    &::after {
+      height: 0px !important;
+    }
+  }
   #zen-workspaces-button {
     &:not([as-button="true"]) {
       --zen-workspaces-strip-background-color: color-mix(in srgb, var(--zen-colors-border) 0%, transparent 100%) !important;
