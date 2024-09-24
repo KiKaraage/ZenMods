@@ -1,10 +1,21 @@
 ## Preview on Zen 1.0.1-a.4
 
-![image](https://github.com/user-attachments/assets/b7b7bb54-b52a-4ab8-820f-449db163c843)
+![image](https://github.com/user-attachments/assets/ac70a6b0-861b-4f94-8d3a-652da29d2db4)
 
-## Applying "Arc Mode"
+## How to Apply?
 
-### 1) Go to Customize Toolbar menu, add Flexible Spaces and move the buttons 
+### 1) Applying the CSS and SVG
+
+- Put the CSS and SVG files on your `chrome` directory (`about:profiles` > Root Directory > Open Folder).
+- Open your `userChrome.css` file in that folder and paste the line below, then save the file.
+
+```
+@import url("arcmode.css");
+```
+- Make sure you have enabled `toolkit.legacyUserProfileCustomizations.stylesheets` and `svg.context-properties.content.enabled` in `about:config`.
+- Restart Zen.
+
+### 2) Go to Customize Toolbar menu, add Flexible Spaces and move the buttons 
 
 - Disclaimer: Since I use this setup with Compact Mode active (either on "Hide sidebar" or "Hide both" mode), I tend to use Expand Sidebar button much less, so I won't include the button in this setup. Instead, I assign the Arc Sidebar icon for Zen's Side Panels button.
 - Right click on navbar > "Customize Toolbar" (Recommended: Do this when you're not on Compact Mode)
@@ -14,16 +25,7 @@
 - Move Download button beside Side Panels button, tick "Hide button when empty" option on.
 - Remove Expand Sidebar button.
 
-![image](https://github.com/user-attachments/assets/e4e14f2c-8c94-4cac-b223-18dda80ad6a6)
-
-### 2) Applying the CSS and SVG
-
-Put the CSS and SVG files on your `chrome` directory (`about:profiles` > Root Directory > Open Folder).
-Open your `userChrome.css` file in that folder and paste the line below; save and restart Zen.
-
-```
-@import url("arcmode.css");
-```
+![image](https://github.com/user-attachments/assets/3f7fb0d6-3a29-4021-8483-fa5ca7c5d444)
 
 ### 3) To get Arc-like Copy URL button feature...
 Use this extension: [Copy Frame or Page URL](https://addons.mozilla.org/en-US/firefox/addon/copy-frame-or-page-url), go to its settings in `about:addons` (or right click the Copy extension icon > Manage Extension), go to the Options tab, enable the "Show button inside address bar" option...
