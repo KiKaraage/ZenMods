@@ -8,7 +8,8 @@
   }
   #PanelUI-menu-button {
     list-style-image: url('./arc-logo.svg') !important;
-    scale: 1.5;
+    scale: 1.2;
+    padding-inline-start: 7px !important;
   }
   #zen-sidepanel-button {
     list-style-image: url('./arc-sidebar.svg') !important;
