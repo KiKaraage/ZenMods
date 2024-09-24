@@ -6,6 +6,7 @@
     border: transparent !important;
     }
   }
+  /* You can adjust the scaling yourself - I adjusted it so the icons won't be blurry on my 768p screen */
   #PanelUI-menu-button {
     list-style-image: url('./arc-logo.svg') !important;
     scale: 1.2;
@@ -17,7 +18,12 @@
   }
   #history-panelmenu {
     list-style-image: url('./arc-archive.svg') !important;
+    scale: 1.35;
+    padding-inline-start: 3px !important;
+  }
+  #new-tab-button {
     scale: 1.1;
+    padding-inline-end: 3px !important;
   }
   #unified-extensions-button {
     list-style-image: url('./arc-splitview.svg') !important;
