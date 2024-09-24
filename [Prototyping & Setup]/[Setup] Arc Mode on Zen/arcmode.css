@@ -1,0 +1,33 @@
+```
+@media (-moz-bool-pref: "uc.arc.mode") {
+  #urlbar:not([breakout-extend="true"]) {
+    #urlbar-background {
+    background-color: transparent !important;
+    border: transparent !important;
+    }
+  }
+  #PanelUI-menu-button {
+    list-style-image: url('./arc-logo.svg') !important;
+    scale: 1.5;
+  }
+  #zen-sidepanel-button {
+    list-style-image: url('./arc-sidebar.svg') !important;
+    scale: 1.1;
+  }
+  #history-panelmenu {
+    list-style-image: url('./arc-archive.svg') !important;
+    scale: 1.1;
+  }
+  #zen-workspaces-button {
+    &:not([as-button="true"]) {
+      --zen-workspaces-strip-background-color: color-mix(in srgb, var(--zen-colors-border) 0%, transparent 100%) !important;
+      & toolbarbutton {
+        & > * {
+          opacity: .9 !important;
+          scale: .9 !important;
+        }
+      }
+    }
+  }
+}
+```
