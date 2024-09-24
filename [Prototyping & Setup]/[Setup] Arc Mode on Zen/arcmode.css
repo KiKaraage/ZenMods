@@ -18,6 +18,9 @@
     list-style-image: url('./arc-archive.svg') !important;
     scale: 1.1;
   }
+  #unified-extensions-button {
+    list-style-image: url('./arc-splitview.svg') !important;
+  }
   #zen-workspaces-button {
     &:not([as-button="true"]) {
       --zen-workspaces-strip-background-color: color-mix(in srgb, var(--zen-colors-border) 0%, transparent 100%) !important;
