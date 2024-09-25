@@ -1,4 +1,3 @@
-```
 @media (-moz-bool-pref: "uc.arc.mode") {
   #urlbar:not([breakout-extend="true"]) {
     #urlbar-background {
@@ -46,4 +45,3 @@
     }
   }
 }
-```
