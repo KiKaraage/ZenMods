@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/22e920a4-9f63-4721-87cf-843a0075c7ca)## Preview on Zen 1.0.1-a.4
+## Preview on Zen 1.0.1-a.4
 
 ![image](https://github.com/user-attachments/assets/ac70a6b0-861b-4f94-8d3a-652da29d2db4)
 
@@ -7,14 +7,14 @@
 - I'm not planning to add "URL bar in sidebar" since I made this setup based on Windows version of Arc.
 - Want Folders? Please wait patiently until the developer(s) applied it in Zen.
 - Otherwise, if you really want folders, you can use Sidebery to get vertical tab, add [this code in Sidebery's Style Editor](https://github.com/KiKaraage/ArcWTF/blob/main/sidebery-css-style), and use [this mod](https://zen-browser.app/themes/5274f79a-e648-4029-adf3-3f10dfdc0012) to hide Zen's native vertical tabs. You can't really use Zen's Workspace with Sidebery, though.
-<details open>
+<details>
   <summary>Since Zen v1.0.1-a.5 doesn't let you move (the ellipsis) Menu button to the very left side with just CSS, that position can be achieved only with enabling Compact Mode. </summary>
 
   ![image](https://github.com/user-attachments/assets/e97e005f-53f8-4c6c-8a81-b60c655f614c)
 
   ![image](https://github.com/user-attachments/assets/53bd2abe-c1a3-43b5-9d08-85529d1d2d46)
 
-  And there's a bug for Compact Mode: In "Hide sidebar" and "Hide both" mode, if you put Side Panels button on the top bar, the bar won't be hidden until you close the Side Panels.
+  And there's a bug for Compact Mode: In "Hide toolbar" and "Hide both" mode, if you put Side Panels button on the top bar, the bar won't be hidden until you close the Side Panels.
 
   ![image](https://github.com/user-attachments/assets/c9e52ee1-9cdd-4827-adb9-30929d26963f)
 
