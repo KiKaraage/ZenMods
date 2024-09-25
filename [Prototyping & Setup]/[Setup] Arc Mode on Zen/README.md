@@ -10,7 +10,7 @@
 - Open your `userChrome.css` file in that folder and paste the line below, then save the file.
 
 ```
-@import url("arcmode.css");
+@import url("./arcmode.css");
 ```
 - Make sure you have enabled `toolkit.legacyUserProfileCustomizations.stylesheets` and `svg.context-properties.content.enabled` in `about:config`.
 - Restart Zen.
