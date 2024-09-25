@@ -12,8 +12,12 @@
 ```
 @import url("./arcmode.css");
 ```
-- Make sure you have enabled `toolkit.legacyUserProfileCustomizations.stylesheets` and `svg.context-properties.content.enabled` in `about:config`.
-- Restart Zen.
+Make sure you go to `about:config` and enable/add these configurations (as Boolean):
+- `toolkit.legacyUserProfileCustomizations.stylesheets`
+- `svg.context-properties.content.enabled`
+- `uc.arc.mode`
+
+Restart Zen afterwards.
 
 ### 2) Go to Customize Toolbar menu, add Flexible Spaces and move the buttons 
 
