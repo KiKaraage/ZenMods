@@ -13,9 +13,9 @@
 @import url("./arcmode.css");
 ```
 Make sure you go to `about:config` and enable/add these configurations (as Boolean):
-- `toolkit.legacyUserProfileCustomizations.stylesheets`
-- `svg.context-properties.content.enabled`
-- `uc.arc.mode`
+- `toolkit.legacyUserProfileCustomizations.stylesheets` (to enable customizations via `userChrome.css`)
+- `svg.context-properties.content.enabled` (to enable similar coloring from browser toolbar buttons to our custom SVG files)
+- `uc.arc.mode` (to enable custom configurations in this setup: custom icons, removing workspace icon strip backgrounds, etc)
 
 Restart Zen afterwards.
 
