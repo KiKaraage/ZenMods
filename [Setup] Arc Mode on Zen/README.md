@@ -2,6 +2,12 @@
 
 ![image](https://github.com/user-attachments/assets/ac70a6b0-861b-4f94-8d3a-652da29d2db4)
 
+Precautions:
+- This setup is made to replicate **ONLY the UI** of Arc Browser, particularly the Windows version.
+- I'm not planning to add "URL bar in sidebar" since I made this setup based on Windows version of Arc.
+- Want Folders? Please wait patiently until the developer(s) applied it in Zen.
+- Otherwise, if you really want folders, you can use Sidebery to get vertical tab, add [this code in Sidebery's Style Editor](https://github.com/KiKaraage/ArcWTF/blob/main/sidebery-css-style), and use [this mod](https://zen-browser.app/themes/5274f79a-e648-4029-adf3-3f10dfdc0012) to hide Zen's native vertical tabs. You can't really use Zen's Workspace with Sidebery, though. 
+
 ## How to Apply?
 
 ### 1) Applying the CSS and SVG
