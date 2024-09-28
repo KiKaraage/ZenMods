@@ -1,0 +1,9 @@
+@media (prefers-color-scheme: dark) {
+  @media (-moz-bool-pref: "zen.theme.color-prefs.amoled") {
+    :root {
+      --zen-dark-color-mix-base: #000 !important;
+      --zen-urlbar-background: color-mix(in srgb, var(--zen-primary-color) 4%, rgb(0, 0, 0) 96%);
+      --zen-colors-tertiary: #000 !important;
+    }
+  }
+}
