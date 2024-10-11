@@ -13,7 +13,11 @@
 
 ![Cleaner Extension Menu Mod thumbnail](https://github.com/user-attachments/assets/aac56b8f-9152-455d-a651-0bc20629fa5f)
 
-- Side Panels Config (Soon)
+- [**Zen Back Forward**]()
+
+
+
+- Side Panels Config (will be released as mods after the feature is reworked by Zen devs)
 
 ![Side Panels Config Mod prototype](https://github.com/user-attachments/assets/6766dff7-ec4e-4671-8f0c-86478f103695)
 
