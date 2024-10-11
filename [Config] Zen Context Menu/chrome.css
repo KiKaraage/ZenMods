@@ -1,3 +1,9 @@
+/* Zen Context Menu v1.1 by KiKaraage */
+
+/* Hide all separators */
+
+/* Hide all icons */
+
 /* Only use “Copy Link Without Site Tracking” */
 @media (-moz-bool-pref: "uc.hidecontext.copylink") {
   #context-copylink {
@@ -19,6 +25,12 @@
     display: none !important;
   }
 }
+/* Hide "Mute Tab" option */
+
+/* Hide "New Tab" option */
+
+/* Hide "Move Tab" options */
+
 /* Hide “Open Tab/Link in New Container Tab” */
 @media (-moz-bool-pref: "uc.hidecontext.newcontainer") {
   #context_reopenInContainer,
@@ -64,6 +76,8 @@
     display: none !important;
   }
 }
+/* Hide "Check Spelling" option while typing in text fields */
+
 /* Hide “Select All Text” option */
 @media (-moz-bool-pref: "uc.hidecontext.selectalltext") {
   #context-selectall {
@@ -85,6 +99,10 @@
     display: none !important;
   }
 }
+/* Hide "Duplicate Tab" */
+
+/* Hide "Close Duplicate Tabs" */
+
 /* Hide “Tab Unloader Actions” */
 @media (-moz-bool-pref: "uc.hidecontext.unloadactions") {
   #context_zenTabActions {
