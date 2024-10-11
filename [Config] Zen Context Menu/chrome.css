@@ -56,7 +56,7 @@
 }
 /* Hide “Email Image”, “Set Image as Desktop Background”, and “View Image Info” options */
 @media (-moz-bool-pref: "uc.hidecontext.image") {
-  #context-saveimage,
+  #context-sendimage,
   #context-sep-setbackground,
   #context-setDesktopBackground,
   #context-sep-sharing,
