@@ -25,6 +25,12 @@
     display: none !important;
   }
 }
+/* Hide "Print Selection” */
+@media (-moz-bool-pref: "uc.hidecontext.printselection") {
+  #context-print-selection {
+    display: none !important;
+  }
+}
 /* Hide "Mute Tab" option */
 
 /* Hide "New Tab" option */
