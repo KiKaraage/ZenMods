@@ -15,6 +15,11 @@
     "type": "checkbox"
   },
   {
+    "property": "uc.hidecontext.printselection",
+    "label": "Hide 'Print Selection'",
+    "type": "checkbox"
+  },
+  {
     "property": "uc.hidecontext.newcontainer",
     "label": "Hide 'Open Tab/Link in New Container Tab'",
     "type": "checkbox"
