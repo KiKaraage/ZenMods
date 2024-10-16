@@ -138,3 +138,21 @@
     display: none !important;
   }
 }
+/* Hide "New Tab", "Move Tab", "Close Tab", "Close Duplicate Tabs", "Close Multiple Tabs", "Reopen Closed Tab" options */
+@media (-moz-bool-pref: "uc.hidecontext.tabMovement") {
+  #context_openANewTab,
+  #context_moveTabOptions,
+  #context_closeTab,
+  #context_closeDuplicateTabs,
+  #context_closeTabOptions,
+  #context_undoCloseTab,
+  #menuseparator:nth-child(26) { /* Broken */
+    display: none !important
+  }
+}
+/* Hide Zen's "Split Tab" context options */
+@media (-moz-bool-pref: "uc.hidecontext.zenSplitTab") {
+  #context_zenSplitTabs {
+    display: none !important
+  }
+}

@@ -70,6 +70,11 @@
     "type": "checkbox"
   },
   {
+    "property": "uc.hidecontext.zenSplitTab",
+    "label": "Hide 'Split Tab'",
+    "type": "checkbox"
+  },
+  {
     "property": "uc.hidecontext.inspect",
     "label": "Hide 'View Page Source' and 'Inspect' options",
     "type": "checkbox"
@@ -82,6 +87,11 @@
   {
     "property": "uc.hidecontext.screenshot",
     "label": "Hide 'Take Screenshot' option",
+    "type": "checkbox"
+  },
+  {
+    "property": "uc.hidecontext.tabMovement",
+    "label": "Hide 'New Tab', 'Move Tab', 'Close Tab', 'Close Duplicate Tabs', 'Close Multiple Tabs', 'Reopen Closed Tab'",
     "type": "checkbox"
   }
 ]
