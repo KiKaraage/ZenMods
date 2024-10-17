@@ -1,6 +1,13 @@
 /* Zen Context Menu v1.1 by KiKaraage */
 
 /* Hide all separators */
+@media (-moz-bool-pref: "uc.hidecontext.separators") {
+  menuseparator::before {
+    border-top: none !important;
+  }
+  menuseparator {
+    padding-block: none !Important;
+  }
 
 /* Hide all icons */
 
