@@ -1,5 +1,15 @@
 [
   {
+    "property": "uc.hidecontext.separators",
+    "label": "Hide all separators",
+    "type": "checkbox"
+  },
+  {
+    "property": "uc.hidecontext.separators",
+    "label": "Hide all icons",
+    "type": "checkbox"
+  },
+  {
     "property": "uc.hidecontext.copylink",
     "label": "Only use 'Copy Link Without Site Tracking'",
     "type": "checkbox"
