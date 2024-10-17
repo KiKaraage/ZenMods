@@ -9,8 +9,38 @@
     padding-block: none !Important;
   }
 
-/* Hide all icons */
-
+/* Hide all icons (Won't work for extension & checkbox context menu options) */
+@media (-moz-bool-pref: "uc.hidecontext.optionicons") {
+   :not(:not(menubar) > menu, #ContentSelectDropdown) > menupopup > menuitem:not(.menuitem-iconic, [type="checkbox"], [type="radio"], .in-menulist, .in-menulist menuitem, .unified-nav-current), :not(:not(menubar) > menu, #ContentSelectDropdown) > menupopup > menu:not(.menu-iconic, [type="checkbox"], [type="radio"], .in-menulist, .in-menulist menu, .unified-nav-current), :not(:not(menubar) > menu, #ContentSelectDropdown) > menupopup > menucaption {
+     padding-inline-start: var(--fp-contextmenu-menuicon-margin-inline) !important;
+   }
+  :not(:not(menubar) > menu, #ContentSelectDropdown) > menupopup > menuitem:not(.menuitem-iconic, [type="checkbox"], [type="radio"], .in-menulist, .in-menulist menuitem, .unified-nav-current), :not(:not(menubar) > menu, #ContentSelectDropdown) > menupopup > menu:not(.menu-iconic, [type="checkbox"], [type="radio"], .in-menulist, .in-menulist menu, .unified-nav-current), #toggle_toolbar-menubar, #PanelUI-history toolbarbutton, #unified-extensions-context-menu menuitem {
+    background-image: none !important;
+  } 
+}
+  
+@media (-moz-bool-pref: "uc.fixcontext.extensionmargins") {
+/* Fix margin for extensions-related context menu, on Windows */
+  .menu-iconic > .menu-iconic-left, .menuitem-iconic > .menu-iconic-left {
+    margin-inline-end: -2px !important;
+    padding-top: 0px !important;
+  }
+/* Fix "Tabs on the right" position when unchecked, on Windows */
+  menupopup[needsgutter] menuitem:not([checked="true"]) {
+    padding-inline-start: 21px !important;
+  }
+  #toolbar-context-customize.viewCustomizeToolbar {
+    padding-inline-start: 38px !important;
+  }
+/* Fix "Tabs on the right" position when checked, on Windows */
+  menuitem[checked="true"] {
+    padding-inline-start: 6px !important;
+  }
+  menuitem[checked="true"] > .menu-iconic-text {
+      padding-inline-start: 10px !important;
+  }
+}
+  
 /* Only use “Copy Link Without Site Tracking” */
 @media (-moz-bool-pref: "uc.hidecontext.copylink") {
   #context-copylink {
@@ -32,12 +62,7 @@
     display: none !important;
   }
 }
-/* Hide "Print Selection” */
-@media (-moz-bool-pref: "uc.hidecontext.printselection") {
-  #context-print-selection {
-    display: none !important;
-  }
-}
+
 /* Hide "Mute Tab" option */
 
 /* Hide "New Tab" option */
@@ -76,6 +101,12 @@
 @media (-moz-bool-pref: "uc.hidecontext.translate") {
   #context-translate-selection,
   #frame-sep {
+    display: none !important;
+  }
+}
+/* Hide "Print Selection” */
+@media (-moz-bool-pref: "uc.hidecontext.printselection") {
+  #context-print-selection {
     display: none !important;
   }
 }
