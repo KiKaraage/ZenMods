@@ -5,9 +5,15 @@
     "type": "checkbox"
   },
   {
-    "property": "uc.hidecontext.separators",
-    "label": "Hide all icons",
+    "property": "uc.hidecontext.optionicons",
+    "label": "Hide all icons (won't work for extension & checkbox context menu options)",
     "type": "checkbox"
+  },
+  {
+    "property": "uc.fixcontext.margins",
+    "label": "Fix margin for 'Tabs on the right' checkbox and extensions-related context menu",
+    "type": "checkbox"
+    "disabledOn": ["macos", "linux"]    
   },
   {
     "property": "uc.hidecontext.copylink",
@@ -22,11 +28,6 @@
   {
     "property": "uc.hidecontext.bookmark",
     "label": "Hide 'Bookmark Tab/Link'",
-    "type": "checkbox"
-  },
-  {
-    "property": "uc.hidecontext.printselection",
-    "label": "Hide 'Print Selection'",
     "type": "checkbox"
   },
   {
@@ -52,6 +53,11 @@
   {
     "property": "uc.hidecontext.translate",
     "label": "Hide Firefox's 'Translate Selection/Link' options",
+    "type": "checkbox"
+  },
+  {
+    "property": "uc.hidecontext.printselection",
+    "label": "Hide 'Print Selection'",
     "type": "checkbox"
   },
   {
