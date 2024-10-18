@@ -62,13 +62,24 @@
     display: none !important;
   }
 }
-
 /* Hide "Mute Tab" option */
-
+@media (-moz-bool-pref: "uc.hidecontext.mutetab") {
+  #context_toggleMuteTab {
+    display: none !important;
+  }
+}
 /* Hide "New Tab" option */
-
+@media (-moz-bool-pref: "uc.hidecontext.newtab") {
+  #context_openANewTab {
+    display: none !important;
+  }
+}
 /* Hide "Move Tab" options */
-
+@media (-moz-bool-pref: "uc.hidecontext.movetaboptions") {
+  #context_moveTabOptions {
+    display: none !important;
+  }
+}
 /* Hide “Open Tab/Link in New Container Tab” */
 @media (-moz-bool-pref: "uc.hidecontext.newcontainer") {
   #context_reopenInContainer,
@@ -85,6 +96,13 @@
     display: none !important;
   }
 }
+/* Hide close tab options (Close Tabs, Close Duplicate Tabs, Close Multiple Tabs) */
+@media (-moz-bool-pref: "uc.hidecontext.closetab") {
+  #context_closeTab, 
+  #context_closeDuplicateTabs, 
+  #context_closeTabOptions {
+    display: none !important;
+  }
 /* Hide “Search Keywords" with your preferred search engine */
 @media (-moz-bool-pref: "uc.hidecontext.search") {
   #context-searchselect {
@@ -121,7 +139,12 @@
   }
 }
 /* Hide "Check Spelling" option while typing in text fields */
-
+@media (-moz-bool-pref: "uc.hidecontext.checkspelling") {
+  #spell-check-enabled,
+  #context-sep-bidi {
+    display: none !important;
+  }
+}
 /* Hide “Select All Text” option */
 @media (-moz-bool-pref: "uc.hidecontext.selectalltext") {
   #context-selectall {
@@ -144,9 +167,11 @@
   }
 }
 /* Hide "Duplicate Tab" */
-
-/* Hide "Close Duplicate Tabs" */
-
+@media (-moz-bool-pref: "uc.hidecontext.duplicatetab") {
+  #context_duplicateTab {
+    display: none !important;
+  }
+}
 /* Hide “Tab Unloader Actions” */
 @media (-moz-bool-pref: "uc.hidecontext.unloadactions") {
   #context_zenTabActions {
