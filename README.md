@@ -13,7 +13,7 @@
 
 ![Cleaner Extension Menu Mod thumbnail](https://github.com/user-attachments/assets/aac56b8f-9152-455d-a651-0bc20629fa5f)
 
-- [**Zen Context Menu**](https://zen-browser.app/themes/81fcd6b3-f014-4796-988f-6c3cb3874db8)
+- [**Zen Context Menu**](https://zen-browser.app/themes/81fcd6b3-f014-4796-988f-6c3cb3874db8) | [Repo](https://github.com/zen-browser/theme-store/tree/main/themes/81fcd6b3-f014-4796-988f-6c3cb3874db8)
 
 ![image](https://github.com/user-attachments/assets/43ea5089-7703-486e-8c78-d06d3ff8d459)
 
