@@ -1,0 +1,87 @@
+@media not all and (-moz-bool-pref: "zen.tabs.vertical.right-side") {
+  @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") {
+  #nav-bar {
+  /*  border: 2px solid black; */
+    border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+    background: var(--lwt-accent-color) !important;
+    }
+    @media (-moz-bool-pref: "zen.view.compact") {
+      #nav-bar {
+        margin: calc(var(--zen-element-separation) + 2px) calc(var(--zen-element-separation) + 2px) 0 calc(var(--zen-element-separation) + 2px) !important;
+      }
+      @media (-moz-bool-pref: "zen.sidebar.enabled") {
+        :root:not([inDOMFullscreen="true"]) #tabbrowser-tabbox {
+          padding: 0 calc(var(--zen-element-separation) - 1px) var(--zen-element-separation) calc(var(--zen-element-separation) - 1px) !important;
+        }
+        @media (-moz-bool-pref: "zen.view.compact") {
+          :root:not([customizing]):not([inDOMFullscreen="true"]) {
+          @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") {
+            & #tabbrowser-tabpanels {
+              :root:not([inDOMFullscreen="true"]) #browser:has(#navigator-toolbox:not([zen-right-side="true"])) & {
+                 padding: 0 var(--zen-element-separation) calc(var(--zen-element-separation) - 1px) 0 !important;
+              }
+            }
+           }
+          }
+        }
+        #zen-sidebar-web-panel {
+          box-shadow: none;
+          border: none;
+          border-radius: 0 0 0 var(--border-radius-medium) !important;
+          margin: 0 0 calc(var(--zen-element-separation) + 2px) calc(var(--zen-element-separation) + 2px);
+      }
+      }
+    }
+    @media not all and (-moz-bool-pref: "zen.view.compact") {
+      #nav-bar {
+        margin: calc(var(--zen-element-separation) + 2px) calc(var(--zen-element-separation) + 2px) 0 calc(var(--zen-element-separation) - 1px) !important;
+      }
+    }
+  .toolbarbutton-1, #PanelUI-button, .titlebar-buttonbox-container, #remote-control-box, #urlbar-search-button, #tracking-protection-icon-container, #identity-box, #page-action-buttons {
+    opacity: 0.3 !important;
+    scale: 0.94 !important;
+    transition: opacity 0.3s ease;
+  }
+  #urlbar-input, .toolbarbutton-1:hover, #PanelUI-button:hover, .titlebar-buttonbox-container:hover, #remote-control-box:hover, #urlbar-search-button:hover, #tracking-protection-icon-container:hover, #identity-box:hover, #page-action-buttons:hover {
+    opacity: 1 !important;
+  }
+  #urlbar-input {
+    font-size: 95% !important;
+  }
+  #nav-bar {
+    min-height: calc(var(--zen-toolbar-height)*0.8) !important;
+    height: calc(var(--zen-toolbar-height)*0.9) !important;
+    max-height: calc(var(--zen-toolbar-height)*0.9) !important;
+  }
+  #zen-sidebar-top-buttons {
+    background-color: var(--zen-main-browser-background);
+  }
+  menupopup, panel {
+  --panel-background: var(--zen-main-browser-background) !important;
+  }
+  :root:not([inDOMFullscreen="true"]) #tabbrowser-tabbox {
+    padding: 0 calc(var(--zen-element-separation) - 1px) var(--zen-element-separation) calc(var(--zen-element-separation) - 1px) !important;
+    /* box-shadow: 0 !important; */
+  }
+  :root:not([inDOMFullscreen="true"]):not([chromehidden~="location"]):not([chromehidden~="toolbar"]) {
+    & #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer {
+      border-radius: 0px 0px var(--zen-webview-border-radius, var(--zen-border-radius)) var(--zen-webview-border-radius, var(--zen-border-radius)) !important;
+      box-shadow: none !important;
+    }
+   }
+  :root:not([inDOMFullscreen="true"]):not([chromehidden~="location"]):not([chromehidden~="toolbar"]) {
+    & #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer {
+      & .browserContainer {
+        border-radius: 0px 0px var(--zen-webview-border-radius, var(--zen-border-radius)) var(--zen-webview-border-radius, var(--zen-border-radius)) !important;
+      }
+    }
+  #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon, .tab-background:is([selected], [multiselected]) {
+    outline-color: color-mix(in srgb, var(--tab-selected-outline-color) 30%, transparent 70%) !important;
+  }
+  @media (-moz-bool-pref: "zen.tabs.vertical") {
+  #tabbrowser-tabs {
+    --tab-selected-bgcolor: light-dark(rgba(255,255,255,.5), color-mix(in srgb, var(--zen-colors-secondary) 70%, transparent 30%)) !important;
+  }
+}
+}
+}
