@@ -8,11 +8,11 @@
   #TabsToolbar {
     margin-block-start: 2px !important;
   }
-}
 
-#zen-appcontent-navbar-container[zen-has-hover="true"] {
-  #PersonalToolbar {
-    opacity: 1;
-    height: 30px !important;
+  #zen-appcontent-navbar-container[zen-has-hover="true"] {
+    #PersonalToolbar {
+      opacity: 1;
+      height: 30px !important;
+    }
   }
 }
