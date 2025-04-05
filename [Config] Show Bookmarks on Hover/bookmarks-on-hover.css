@@ -1,0 +1,18 @@
+:root:not([zen-single-toolbar="true"]) {
+  #PersonalToolbar:not([collapsed="true"]) {
+    min-height: 2px !important;
+    height: 2px !important;
+    opacity: 0;
+    transition: 0.2s ease;
+  }
+  #TabsToolbar {
+    margin-block-start: 2px !important;
+  }
+}
+
+#zen-appcontent-navbar-container[zen-has-hover="true"] {
+  #PersonalToolbar {
+    opacity: 1;
+    height: 30px !important;
+  }
+}
