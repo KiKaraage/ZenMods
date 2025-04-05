@@ -3,7 +3,7 @@
     min-height: 2px !important;
     height: 2px !important;
     opacity: 0;
-    transition: 0.2s ease;
+    transition: 0.2s ease !important;
   }
   #TabsToolbar {
     margin-block-start: 2px !important;
