@@ -76,12 +76,7 @@
     height: inherit !important;
   }
 }
-/* Hide "Menu Bar" toggle */
-@media -moz-pref("uc.hidecontext.menubar") {
-  #toggle_toolbar-menubar {
-    display: none !important;
-  }
-}
+
 /* Hide "Bookmark Tab/Link” */
 @media -moz-pref("uc.hidecontext.bookmark") {
   #toolbar-context-bookmarkSelectedTab,
@@ -108,12 +103,7 @@
     display: none !important;
   }
 }
-/* Hide 'Add to Web Panel' option" */
-@media -moz-pref("uc.hidecontext.addtowebpanel") {
-  #context-zenAddToWebPanel {
-    display: none !important;
-  }
-}
+
 /* Hide "Move Tab" options */
 @media -moz-pref("uc.hidecontext.movetaboptions") {
   #context_moveTabOptions {
