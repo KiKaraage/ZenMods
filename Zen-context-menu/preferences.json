@@ -3,6 +3,7 @@
         "property": "widget.macos.native-context-menus",
         "label": "‼️ Uncheck to enable this mod in macOS, overriding native context menu. (Check this again ✅ before disabling/removing this mod)",
         "type": "checkbox",
+        "defaultValue": "false",
         "disabledOn": [
             "windows",
             "linux"
@@ -10,18 +11,25 @@
     },
     {
         "property": "uc.hidecontext.separators",
-        "label": "〰️ Hide all separators",
+        "label": "〰️ Hide most separators",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
-        "property": "uc.hidecontext.restoreicons",
+        "property": "uc.hidecontext.extseparators",
+        "label": "〰️ Hide separators above extension options",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.fixcontext.restoreicons",
         "label": "🔣 Restore back all icons",
         "type": "checkbox"
     },
     
     {
-        "property": "uc.hidecontext.hideexticons",
+        "property": "uc.hidecontext.exticons",
         "label": "🧩 Hide icons for extensions options",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
@@ -30,23 +38,20 @@
         "type": "checkbox"
     },
     {
-        "property": "uc.fixcontext.applyzencolors",
+        "property": "uc.fixcontext.applyzenaccent",
         "label": "🎨 Apply Zen accent color (the main color on your workspace gradient)",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.fixcontext.margins",
-        "label": "🎨 Reduce left margin of the options (except extensions and checkboxes)",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.copylink",
         "label": "🔗 Prioritize 'Copy Clean Link' when possible",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.bookmark",
         "label": "📑🔗 Hide 'Bookmark Tab/Tabs/Link' options",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
@@ -57,11 +62,13 @@
     {
         "property": "uc.hidecontext.newtab",
         "label": "📑 Hide 'New Tab' & 'New Tab Below'",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.movetaboptions",
         "label": "📑 Hide 'Move Tab' options",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
@@ -82,6 +89,12 @@
         {
         "property": "uc.hidecontext.closemultiple",
         "label": "📑 Hide 'Close Multiple Tabs'",
+        "defaultValue": "true",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.askchatbot",
+        "label": "📑🌐🔤🔗 Hide 'Ask AI chatbot' options if you enabled the feature",
         "type": "checkbox"
     },
     {
@@ -92,6 +105,7 @@
     {
         "property": "uc.hidecontext.searchinpriv",
         "label": "🔤🔗 Hide 'Search in a Private Window'",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
@@ -102,11 +116,17 @@
     {
         "property": "uc.hidecontext.printselection",
         "label": "🔤 Hide 'Print Selection'",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.image",
         "label": "🖼️ Hide 'Email Image', 'Set Image as Desktop Background', & 'View Image Info' options",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.video",
+        "label": "📺 Hide 'Copy Video Link' and 'Email Video' options in video player",
         "type": "checkbox"
     },
     {
@@ -116,17 +136,20 @@
     },
     {
         "property": "uc.hidecontext.selectalltext",
-        "label": "🌐🔤 Hide 'Select All Text' option",
+        "label": "🌐🔤 Hide 'Select All' option",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.selectalltabs",
         "label": "📑 Hide 'Select All Tabs'",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.reloadtab",
         "label": "📑 Hide 'Reload Tab'",
+        "defaultValue": "true",
         "type": "checkbox"
     },
     {
@@ -160,8 +183,13 @@
         "type": "checkbox"
     },
     {
+        "property": "uc.hidecontext.pagetopoptions",
+        "label": "🌐 Hide 'Back', 'Forward', 'Reload' & 'Bookmark Page' options",
+        "type": "checkbox"
+    },
+    {
         "property": "uc.hidecontext.frame",
-        "label": "📺 Hide 'This Frame' option",
+        "label": "🖼️📺 Hide 'This Frame' option",
         "type": "checkbox"
     }
 ]
