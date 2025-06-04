@@ -124,8 +124,8 @@
         "type": "checkbox"
     },
     {
-        "property": "uc.hidecontext.video",
-        "label": "📺 Hide 'Copy Video Link' and 'Email Video' options in video player",
+        "property": "uc.hidecontext.audiovideo",
+        "label": "📺 Hide "Copy Video Link", "Copy Audio Link", "Email Video" and "Email Audio" options",
         "type": "checkbox"
     },
     {
@@ -182,7 +182,7 @@
         "type": "checkbox"
     },
     {
-        "property": "uc.hidecontext.pagetopoptions",
+        "property": "uc.hidecontext.navigation",
         "label": "🌐 Hide 'Back', 'Forward', 'Reload' & 'Bookmark Page' options",
         "type": "checkbox"
     },
