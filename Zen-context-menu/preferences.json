@@ -177,6 +177,11 @@
         "type": "checkbox"
     },
     {
+        "property": "uc.hidecontext.frame",
+        "label": "🖼️📺 Hide 'This Frame' option",
+        "type": "checkbox"
+    },
+    {
         "property": "uc.hidecontext.pin",
         "label": "📑 Hide 'Pin Tab' & 'Add to Essentials' options",
         "type": "checkbox"
@@ -184,11 +189,6 @@
     {
         "property": "uc.hidecontext.navigation",
         "label": "🌐 Hide 'Back', 'Forward', 'Reload' & 'Bookmark Page' options",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.frame",
-        "label": "🖼️📺 Hide 'This Frame' option",
         "type": "checkbox"
     }
 ]
