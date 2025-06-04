@@ -60,7 +60,22 @@
     padding-block: 0px !important;
   }
 }
-
+/* Hide extension icons in tabs and content area context menu to fit current Zen styling */
+@media -moz-pref("uc.hidecontext.exticons") {
+  #tabContextMenu, #contentAreaContextMenu {
+    .menuitem-iconic:not(
+    [id="context-back"],
+    [id="context-forward"],
+    [id="context-reload"],
+    [id="context-stop"],
+    [id="context-bookmarkpage"]
+    ) {
+      > .menu-icon {
+        display: none !important;
+      }
+    }
+  }
+}
 /* Apply Zen workspace gradient to all context menu and panels
  * Suitable if the OS, desktop environment or window manager supported blur background */
 @media -moz-pref("uc.fixcontext.applyzengradient") {
