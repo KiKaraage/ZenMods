@@ -10,9 +10,14 @@
         ]
     },
     {
+        "property": "uc.fixcontext.ergonomicsfortabs",
+        "label": "🔁 Reorder options for tab context menu to improve ergonomics (enabled by default)",
+        "defaultValue": "true",
+        "type": "checkbox"
+    },
+    {
         "property": "uc.hidecontext.separators",
         "label": "〰️ Hide most separators",
-        "defaultValue": "true",
         "type": "checkbox"
     },
     {
@@ -28,7 +33,7 @@
     
     {
         "property": "uc.hidecontext.exticons",
-        "label": "🧩 Hide icons for extensions options",
+        "label": "🧩 Hide icons for extensions options (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
@@ -44,13 +49,13 @@
     },
     {
         "property": "uc.hidecontext.copylink",
-        "label": "🔗 Prioritize 'Copy Clean Link' when possible",
+        "label": "🔗 Prioritize 'Copy Clean Link' when possible (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.bookmark",
-        "label": "📑🔗 Hide 'Bookmark Tab/Tabs/Link' options",
+        "label": "📑🔗 Hide 'Bookmark Tab/Tabs/Link' options (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
@@ -61,13 +66,13 @@
     },
     {
         "property": "uc.hidecontext.newtab",
-        "label": "📑 Hide 'New Tab' & 'New Tab Below'",
+        "label": "📑 Hide 'New Tab' & 'New Tab Below' (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.movetaboptions",
-        "label": "📑 Hide 'Move Tab' options",
+        "label": "📑 Hide 'Move Tab' options (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
@@ -88,7 +93,7 @@
     },
         {
         "property": "uc.hidecontext.closemultiple",
-        "label": "📑 Hide 'Close Multiple Tabs'",
+        "label": "📑 Hide 'Close Multiple Tabs' options (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
@@ -104,7 +109,7 @@
     },
     {
         "property": "uc.hidecontext.searchinpriv",
-        "label": "🔤🔗 Hide 'Search in a Private Window'",
+        "label": "🔤🔗 Hide 'Search in a Private Window' (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
@@ -115,7 +120,7 @@
     },
     {
         "property": "uc.hidecontext.printselection",
-        "label": "🔤 Hide 'Print Selection'",
+        "label": "🔤 Hide 'Print Selection' (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
@@ -136,19 +141,19 @@
     },
     {
         "property": "uc.hidecontext.selectalltext",
-        "label": "🌐🔤 Hide 'Select All' option",
+        "label": "🌐🔤 Hide 'Select All Text' option (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.selectalltabs",
-        "label": "📑 Hide 'Select All Tabs'",
+        "label": "📑 Hide 'Select All Tabs' (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.reloadtab",
-        "label": "📑 Hide 'Reload Tab'",
+        "label": "📑 Hide 'Reload Tab' (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
