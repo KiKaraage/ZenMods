@@ -73,54 +73,13 @@
   }
 }
 
-
-@media -moz-pref("uc.fixcontext.extensionmargins") {
-  /* Fix padding for extensions-related context menu on Windows */
-  menu > .menu-iconic-text,
-  menuitem > .menu-iconic-text {
-    padding-inline-start: calc(
-      var(--fp-contextmenu-menuicon-margin-inline) - 10px
-    ) !important;
-  }
-  /* Fix padding for "Tabs on the right" & "Compact Mode" options on Windows */
-  menuitem[checked="true"] > .menu-iconic-text {
-    padding-inline-start: 10px !important;
-  }
-  #zen-toolbar-context-tabs-right {
-    padding-inline-start: 34px !important;
-  }
-  #zen-toolbar-context-tabs-right[checked="true"] {
-    padding-inline-start: 8px !important;
-  }
-  #zen-context-menu-compact-mode {
-    padding-inline-start: calc(
-      var(--fp-contextmenu-menuitem-padding-inline) + 18px +
-        var(--fp-contextmenu-menuicon-margin-inline)
-    ) !important;
-  }
-  #zen-context-menu-compact-mode-hide-sidebar,
-  #zen-context-menu-compact-mode-hide-toolbar,
-  #zen-context-menu-compact-mode-hide-both {
-    padding-inline-start: 40px !important;
-  }
-  #zen-context-menu-compact-mode-hide-sidebar[checked="true"],
-  #zen-context-menu-compact-mode-hide-toolbar[checked="true"],
-  #zen-context-menu-compact-mode-hide-both[checked="true"] {
-    padding-inline-start: 16px !important;
-    & .menu-iconic-text {
-      padding-inline-start: 2px !important;
-    }
-  }
-}
-
-/* Only use “Copy Link Without Site Tracking” */
+/* TODO: Only use “Copy Link Without Site Tracking” */
 @media -moz-pref("uc.hidecontext.copylink") {
   #context-copylink {
     opacity: 0 !important;
     padding: 0 !important;
     height: 2px !important;
   }
-  
   #context-copylink:hover {
     opacity: 1 !important;
     padding-block: 0.5em !important;
@@ -141,6 +100,7 @@
 @media -moz-pref("uc.hidecontext.bookmark") {
   #toolbar-context-bookmarkSelectedTab,
   #toolbar-context-bookmarkSelectedTabs,
+  #context_bookmarkSelectedTabs,
   #context_bookmarkTab,
   #context-bookmarklink {
     display: none !important;
@@ -186,10 +146,15 @@
     display: none !important;
   }
 }
-/* Hide close tab options (Close Tabs, Close Duplicate Tabs, Close Multiple Tabs) */
+/* Hide "Close Tabs" & "Close Duplicate Tabs"*/
 @media -moz-pref("uc.hidecontext.closetab") {
   #context_closeTab,
-  #context_closeDuplicateTabs,
+  #context_closeDuplicateTabs {
+    display: none !important;
+  }
+}
+/* Hide "Close Multiple Tabs" */
+@media -moz-pref("uc.hidecontext.closemultiple") {
   #context_closeTabOptions {
     display: none !important;
   }
@@ -271,12 +236,6 @@
   #context_duplicateTab,
   #context_duplicateTabs,
   #tabContextMenu > :nth-child(21) {
-    display: none !important;
-  }
-}
-/* Hide “Tab Unloader Actions” */
-@media -moz-pref("uc.hidecontext.unloadactions") {
-  #context_zenTabActions {
     display: none !important;
   }
 }
