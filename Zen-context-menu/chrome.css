@@ -166,10 +166,16 @@
     display: none !important;
   }
 }
-/* Hide Firefox's "Translate Selection/Link" options */
+/* Hide "Translate Selection/Link" options */
 @media -moz-pref("uc.hidecontext.translate") {
   #context-translate-selection,
   #frame-sep {
+    display: none !important;
+  }
+}
+/* Hide "Ask AI chatbot" options */
+@media -moz-pref("uc.hidecontext.askchatbot") {
+  #context-ask-chat {
     display: none !important;
   }
 }
@@ -189,6 +195,16 @@
     display: none !important;
   }
 }
+/* Hide "Copy Video Link", "Copy Audio Link", "Email Video" and "Email Audio" options */
+@media -moz-pref("uc.hidecontext.audiovideo") {
+  #context-copyvideourl,
+  #context-copyaudiourl,
+  #context-sendvideo,
+  #context-sendaudio,
+  #context-sep-sharing {
+    display: none !important;
+  }
+}
 /* Hide "Check Spelling" and "Text/Page Direction" option while typing in text fields */
 @media -moz-pref("uc.hidecontext.checkspelling") {
   #spell-separator,
@@ -198,6 +214,20 @@
   #context-sep-bidi,
   #context-bidi-text-direction-toggle,
   #context-bidi-page-direction-toggle {
+    display: none !important;
+  }
+}
+/* Hide "Take Screenshot" option */
+@media -moz-pref("uc.hidecontext.screenshot") {
+  #context-take-screenshot,
+  #context-sep-screenshots,
+  #frame-sep {
+    display: none !important;
+  }
+}
+/* Hide "This Frame" option */
+@media -moz-pref("uc.hidecontext.frame") {
+  #frame-sep, #frame {
     display: none !important;
   }
 }
@@ -252,14 +282,6 @@
     display: none !important;
   }
 }
-/* Hide "Take Screenshot" option */
-@media -moz-pref("uc.hidecontext.screenshot") {
-  #context-take-screenshot,
-  #context-sep-screenshots,
-  #frame-sep {
-    display: none !important;
-  }
-}
 /* Hide "Pin Tab" and "Add to Essentials" options */
 @media -moz-pref("uc.hidecontext.pin") {
   #context_pinTab,
@@ -271,9 +293,9 @@
     display: none !important;
   }
 }
-/* Hide "This Frame" option */
-@media -moz-pref("uc.hidecontext.frame") {
-  #frame-sep, #frame {
+/* Hide top buttons (Back, Forward, Reload, Bookmark Page) on page context menu */
+@media -moz-pref("uc.hidecontext.navigation") {
+  #context-navigation, #context-sep-navigation {
     display: none !important;
   }
 }
