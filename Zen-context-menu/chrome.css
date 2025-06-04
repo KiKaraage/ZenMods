@@ -25,13 +25,13 @@
     }
     #context_moveTabToGroup,
     #context_reopenInContainer,
-    #context-zen-change-workspace-tab,
-    #context_zenSplitTabs {
+    #context-zen-change-workspace-tab {
       order: -5 !important;
     }
-    :nth-child(28) {
+    :nth-child(32) {
       order: -4 !important;
     }
+    #context_zenSplitTabs,
     #context_undoCloseTab {
       order: -3 !important;
     } 
@@ -45,7 +45,7 @@
     #context_zenSplitTabs[disabled], #context_closeDuplicateTabs[disabled]{
       display: none;
     }
-    :nth-child(32), :nth-child(34) {
+    :nth-child(28), :nth-child(34) {
       display: none;
     }
   }
