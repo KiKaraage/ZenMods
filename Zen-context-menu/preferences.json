@@ -25,7 +25,6 @@
         "label": "🔣 Restore back all icons",
         "type": "checkbox"
     },
-    
     {
         "property": "uc.hidecontext.exticons",
         "label": "🧩 Hide icons for extensions options (enabled by default)",
