@@ -125,7 +125,7 @@
     },
     {
         "property": "uc.hidecontext.audiovideo",
-        "label": "📺 Hide "Copy Video Link", "Copy Audio Link", "Email Video" and "Email Audio" options",
+        "label": "📺 Hide 'Copy Video Link', 'Copy Audio Link', 'Email Video' and 'Email Audio' options",
         "type": "checkbox"
     },
     {
