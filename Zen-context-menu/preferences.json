@@ -17,12 +17,7 @@
     },
     {
         "property": "uc.hidecontext.separators",
-        "label": "〰️ Hide most separators",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.extseparators",
-        "label": "〰️ Hide separators above extension options",
+        "label": "〰️ Hide all separators",
         "type": "checkbox"
     },
     {
