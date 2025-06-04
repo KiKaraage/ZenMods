@@ -1,5 +1,56 @@
 /* Zen Context Menu v3.0 by KiKaraage */
 
+/* Fix ergonomics for tab context menu by applying some reorderings 
+ * plus hiding disabled options and some separators
+ * Applied by default when enabling Zen Context Menu mod */
+@media -moz-pref("uc.fixcontext.ergonomicsfortabs") {
+  #tabContextMenu {
+    #context_toggleMuteTab,
+    #context_toggleMuteSelectedTabs,
+    #context_zen-add-essential,
+    #context_zen-remove-essential,
+    #context_pinTab,
+    #context_pinSelectedTabs,
+    #context_unpinTab,
+    #context_unpinSelectedTabs {
+      order: -8 !important;
+    }
+    #context_duplicateTab,
+    #context_duplicateTabs,
+    #context_unloadTab {
+      order: -7 !important;
+    }
+    :nth-child(5) {
+      order: -6 !important;
+    }
+    #context_moveTabToGroup,
+    #context_reopenInContainer,
+    #context-zen-change-workspace-tab,
+    #context_zenSplitTabs {
+      order: -5 !important;
+    }
+    :nth-child(28) {
+      order: -4 !important;
+    }
+    #context_undoCloseTab {
+      order: -3 !important;
+    } 
+    #context_closeTab,
+    #context_closeTabOptions,
+    #context_closeDuplicateTabs,
+    #context_zen-reset-pinned-tab,
+    #context_zen-replace-pinned-url-with-current {
+      order: 2;
+    }
+    #context_zenSplitTabs[disabled], #context_closeDuplicateTabs[disabled]{
+      display: none;
+    }
+    :nth-child(32), :nth-child(34) {
+      display: none;
+    }
+  }
+}
+
 /* Hide all separators */
 @media -moz-pref("uc.hidecontext.separators") {
   menuseparator::before {
@@ -61,6 +112,7 @@
     }
   }
 }
+
 /* Only use “Copy Link Without Site Tracking” */
 @media -moz-pref("uc.hidecontext.copylink") {
   #context-copylink {
@@ -76,6 +128,14 @@
     height: inherit !important;
   }
 }
+
+
+
+
+
+
+
+
 
 /* Hide "Bookmark Tab/Link” */
 @media -moz-pref("uc.hidecontext.bookmark") {
@@ -192,7 +252,8 @@
 @media -moz-pref("uc.hidecontext.selectalltabs") {
   #context_selectAllTabs,
   #context_selectedAllTabs,
-  #toolbar-context-selectAllTabs {
+  #toolbar-context-selectAllTabs,
+  #tabContextMenu > :nth-child(28) {
     display: none !important;
   }
 }
@@ -208,7 +269,8 @@
 /* Hide "Duplicate Tab" */
 @media -moz-pref("uc.hidecontext.duplicatetab") {
   #context_duplicateTab,
-  #context_duplicateTabs {
+  #context_duplicateTabs,
+  #tabContextMenu > :nth-child(21) {
     display: none !important;
   }
 }
