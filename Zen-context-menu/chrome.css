@@ -61,41 +61,36 @@
   }
 }
 
-/* Apply Zen workspace gradient to all context menu, panels, and confirmation pop-ups
+/* Apply Zen workspace gradient to all context menu and panels
  * Suitable if the OS, desktop environment or window manager supported blur background */
 @media -moz-pref("uc.fixcontext.applyzengradient") {
   menupopup, panel {
     --panel-background: var(--zen-main-browser-background) !important;
   }
-  /* Fix text color on confirmation pop-ups when applying Zen colors on light mode */
+  /* Fix text color on Firefox confirmation pop-ups when applying Zen colors on light mode */
   #confirmation-hint {
     --arrowpanel-color: var(--sidebar-text-color) !important;
+    border: none !important;
+  }
+}
+/* Apply Zen workspace accent color to all context menu and panels*/
+@media -moz-pref("uc.fixcontext.applyzenaccent") {
+  menupopup, panel {
+    --panel-background: color-mix(in srgb, var(--zen-primary-color) 50%, var(--zen-colors-tertiary)) !important;
   }
 }
 
-/* TODO: Only use “Copy Link Without Site Tracking” */
+/* Prioritize “Copy Clean Link" when available, otherwise, only show "Copy Link” */
 @media -moz-pref("uc.hidecontext.copylink") {
-  #context-copylink {
-    opacity: 0 !important;
-    padding: 0 !important;
-    height: 2px !important;
+  #contentAreaContextMenu:has(#context-stripOnShareLink[disabled="false"]) {
+    #context-copylink {
+      display: none !important;
+    }
   }
-  #context-copylink:hover {
-    opacity: 1 !important;
-    padding-block: 0.5em !important;
-    padding-inline-start: calc( var(--fp-contextmenu-menuitem-padding-inline) + 16px + var(--fp-contextmenu-menuicon-margin-inline) ) !important;
-    height: inherit !important;
+  #context-stripOnShareLink[disabled="true"] {
+    display: none !important;
   }
 }
-
-
-
-
-
-
-
-
-
 /* Hide "Bookmark Tab/Link” */
 @media -moz-pref("uc.hidecontext.bookmark") {
   #toolbar-context-bookmarkSelectedTab,
