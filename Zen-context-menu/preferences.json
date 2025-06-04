@@ -49,7 +49,7 @@
     },
     {
         "property": "uc.hidecontext.bookmark",
-        "label": "📑🔗 Hide 'Bookmark Tab/Tabs/Link' options (enabled by default)",
+        "label": "📑 🔗 Hide 'Bookmark Tab/Tabs/Link' options (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
@@ -72,12 +72,12 @@
     },
     {
         "property": "uc.hidecontext.newcontainer",
-        "label": "📑🔗 Hide 'Open Tab/Link in New Container Tab' options",
+        "label": "📑 🔗 Hide 'Open Tab/Link in New Container Tab' options",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.sendtodevice",
-        "label": "📑🌐🔗 Hide 'Send Tab/Page/Link to Device' options",
+        "label": "📑 🌐 🔗 Hide 'Send Tab/Page/Link to Device' options",
         "type": "checkbox"
     },
     {
@@ -93,12 +93,12 @@
     },
     {
         "property": "uc.hidecontext.askchatbot",
-        "label": "📑🌐🔤🔗 Hide 'Ask AI chatbot' options if you enabled the feature",
+        "label": "📑 🌐 🔤 🔗 Hide 'Ask AI chatbot' options if you enabled the feature",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.search",
-        "label": "🔤🔗 Hide 'Search Web for Selected Text/Link' options",
+        "label": "🔤 🔗 Hide 'Search Web for Selected Text/Link' options",
         "type": "checkbox"
     },
     {
@@ -109,7 +109,7 @@
     },
     {
         "property": "uc.hidecontext.translate",
-        "label": "🔤🔗 Hide 'Translate Selection/Link Text' options",
+        "label": "🔤 🔗 Hide 'Translate Selection/Link Text' options",
         "type": "checkbox"
     },
     {
@@ -125,7 +125,7 @@
     },
     {
         "property": "uc.hidecontext.audiovideo",
-        "label": "📺 Hide 'Copy Video Link', 'Copy Audio Link', 'Email Video' and 'Email Audio' options",
+        "label": "🎵 📺 Hide 'Copy Video Link', 'Copy Audio Link', 'Email Video' and 'Email Audio' options",
         "type": "checkbox"
     },
     {
@@ -135,7 +135,7 @@
     },
     {
         "property": "uc.hidecontext.selectalltext",
-        "label": "🌐🔤 Hide 'Select All Text' option (enabled by default)",
+        "label": "🌐 🔤 Hide 'Select All Text' option (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
@@ -163,12 +163,12 @@
     },
     {
         "property": "uc.hidecontext.inspect",
-        "label": "🌐🔤 Hide 'View Page Source' & 'Inspect' options",
+        "label": "🌐 🔤 Hide 'View Page Source' & 'Inspect' options",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.savelink",
-        "label": "🌐🔗 Hide 'Save Page/Link As' options",
+        "label": "🌐 🔗 Hide 'Save Page/Link As' options",
         "type": "checkbox"
     },
     {
@@ -178,7 +178,7 @@
     },
     {
         "property": "uc.hidecontext.frame",
-        "label": "🖼️📺 Hide 'This Frame' option",
+        "label": "🖼️ 📺 Hide 'This Frame' option",
         "type": "checkbox"
     },
     {
