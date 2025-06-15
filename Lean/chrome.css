@@ -1,0 +1,220 @@
+/*
+* github.com/KiKaraage/
+* ZenMods/Lean - v1.0
+* Show things only when you need it: Top & bottom buttons, workspace indicator, bookmarks bar and more
+*/
+
+/* 1 - Hide top workspace indicator unless when editing space name + adjust Essentials area bottom padding */
+@media -moz-pref("mod.lean.hide-top-workspace") {
+  .zen-current-workspace-indicator:not(:has(.tab-label-container-editing)) {
+    visibility: collapse !important;
+  }
+  @media -moz-pref("mod.lean.bottom-buttons-as-pinned-ext") {
+    .zen-essentials-container:has(.tabbrowser-tab) {
+      padding-bottom: 4px !important;
+    }
+    #main-window[zen-single-toolbar="true"] {
+      .zen-essentials-container {
+        padding-bottom: 4px !important;
+      }
+    }
+  }
+  @media not -moz-pref("mod.lean.bottom-buttons-as-pinned-ext") {
+    .zen-essentials-container:has(.tabbrowser-tab) {
+      padding-bottom: 4px !important;
+    }
+    #main-window[zen-single-toolbar="true"] {
+      .zen-essentials-container {
+        padding-bottom: 4px !important;
+      }
+    }
+  }
+}
+
+/* 2 - Hide bottom buttons area unless tab sidebar is hovered */
+:root:not([customizing]) {
+  @media -moz-pref("mod.lean.show-bottom-buttons-on-hover") {
+    #zen-sidebar-foot-buttons, #zen-workspaces-button, #zen-sidebar-foot-buttons toolbarbutton {
+      transition: ease 0.2s !important;
+    }
+    #titlebar:not(:hover) {
+      #zen-sidebar-foot-buttons {
+        min-height: 0px !important;
+        gap: 0px !important;
+        padding-top: 0px !important;
+        toolbarbutton, #zen-workspaces-button {
+          opacity: 0 !important;
+          height: 0px !important;
+        }
+      }
+      zen-workspace {
+        & > arrowscrollbox {
+          &[overflowing] {
+            &::after {
+              height: 0px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 3 - Hide top buttons unless tab sidebar is hovered on Single Toolbar mode */
+:root[zen-single-toolbar="true"] {
+  @media -moz-pref("mod.lean.show-top-buttons-on-hover") {
+    #zen-sidebar-top-buttons, #zen-sidebar-top-buttons-customization-target, #zen-sidebar-top-buttons toolbarbutton {
+      transition: ease 0.2s !important;
+    }
+    #navigator-toolbox:not(:hover) {
+      & #zen-appcontent-navbar-wrapper, & #zen-sidebar-top-buttons {
+        --zen-toolbar-height: 1px !important;
+        opacity: 0 !important;
+      }
+    }
+  }
+}
+
+/* 4 - Minimal top buttons on Single Toolbar mode
+ * You can hover slightly above URL bar to access the top buttons 
+ * You can set the opacity of top buttons when hovered as well, to give hint when needed
+ * Default opacity will be 0.25. Change it to 0 to go ninja! */
+:root[zen-single-toolbar="true"] {
+  --top-toolbar-hover-opacity: 0;
+  @media -moz-pref("mod.lean.minimal-top-buttons") {
+    #zen-sidebar-top-buttons, #zen-sidebar-top-buttons-customization-target, #zen-sidebar-top-buttons toolbarbutton {
+      transition: ease 0.2s !important;
+    }
+    #navigator-toolbox {
+      & #zen-appcontent-navbar-wrapper, & #zen-sidebar-top-buttons {
+        --zen-toolbar-height: 1px !important;
+        opacity: var(--top-toolbar-hover-opacity) !important;
+        z-index: 9 !important;
+      }
+    }
+    #navigator-toolbox:not(:hover) {
+      & #zen-appcontent-navbar-wrapper, & #zen-sidebar-top-buttons {
+        opacity: 0 !important;
+      }
+    }
+  }
+}
+
+
+/* 5 - Only show bookmarks when hovering top navigation bar on Multiple & Collapsed Toolbar mode
+ * Mimicking how it works on Single Toolbar */
+:root:not([zen-single-toolbar="true"]) {
+  @media -moz-pref("mod.lean.show-bookmarks-on-hover") {
+    #PersonalToolbar:not([collapsed="true"]) {   
+      min-height: 2px !important;
+      height: 2px !important;
+      opacity: 0;
+      transition: 0.2s ease !important;
+    }
+    &[customizing] {
+      #PersonalToolbar {
+        opacity: 1;
+        height: 30px !important;
+      }
+    }  
+    #zen-appcontent-navbar-container:hover {
+      #PersonalToolbar {
+        opacity: 1;
+        height: 30px !important;
+      }
+    }
+    #TabsToolbar {
+      margin-block-start: 2px !important;
+    }
+  }
+}
+
+/* 6a - WIP: Add the "pinned extensions" look to bottom buttons area on Single Toolbar mode
+ * Also hide the workspace buttons */
+@media -moz-pref("mod.lean.bottom-buttons-as-pinned-ext") {
+  #main-window[zen-single-toolbar="true"] {
+    #navigator-toolbox[zen-sidebar-expanded="true"] {
+      & #zen-sidebar-foot-buttons {
+        order: -1 !important;
+        justify-content: center !important;
+        padding-inline: calc(var(--zen-toolbox-padding) - 3px) !important;
+        gap: 2px !important;
+        padding-top: 1px !important;
+        padding-bottom: 3px !important;
+      }
+      #zen-sidebar-foot-buttons toolbarbutton {
+        .toolbarbutton-1 {
+          padding-inline: 0 !important;
+          margin: 0 !important;
+          margin-top: 0 !important;
+        }
+        padding-inline: 0px !important;
+        min-width: 40px !important;
+        &.toolbarbutton-1 {
+          &:not([disabled]) {
+            &:hover > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+              background-color: transparent !important;
+            }
+          }
+        }
+      }
+      #zen-sidebar-foot-buttons toolbarbutton {
+        background-color: var(--zen-toolbar-element-bg) !important;
+        border-radius: var(--tab-border-radius) !important;
+      }
+      #zen-sidebar-foot-buttons toolbarbutton:hover {
+        background-color: var(--toolbarbutton-hover-background) !important;
+      }
+      #zen-workspaces-button {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+      }
+    }
+  }
+}
+
+@media not -moz-pref("mod.lean.show-bottom-buttons-on-hover") {
+  @media -moz-pref("mod.lean.bottom-buttons-pinned-ext") {
+    #main-window[zen-single-toolbar="true"] {
+      #navigator-toolbox[zen-sidebar-expanded="true"] {
+        & #zen-sidebar-foot-buttons {
+          min-height: 30px !important;
+        }
+        #zen-sidebar-foot-buttons toolbarbutton {
+          margin-block: 1px 3px !important;
+          height: 30px !important;
+        }
+      }
+    }
+  }
+}
+
+
+/* 6b - WIP: Bottom buttons as "pinned extensions", but only shown in hover
+ * Still had to reduce the padding of bottom buttons area */
+@media -moz-pref("mod.lean.show-bottom-buttons-on-hover") {
+  @media -moz-pref("mod.lean.bottom-buttons-pinned-ext") {
+    #main-window[zen-single-toolbar="true"] {
+      #navigator-toolbox[zen-sidebar-expanded="true"]:hover {
+        & #zen-sidebar-foot-buttons {
+          min-height: 30px !important;
+        }
+        #zen-sidebar-foot-buttons toolbarbutton {
+          margin-block: 1px 3px !important;
+          min-width: 40px !important;
+          height: 30px !important;
+        }
+      }
+      #navigator-toolbox[zen-sidebar-expanded="true"] {
+        & #zen-sidebar-foot-buttons {
+          min-height: 0px !important;
+        }
+        #zen-sidebar-foot-buttons toolbarbutton {
+          margin-block: 1px 0px !important;
+          height: 0px !important;
+        }
+      }
+    }
+  }
+}
