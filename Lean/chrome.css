@@ -153,12 +153,23 @@
 :root[zen-single-toolbar='true'] {
   @media (-moz-bool-pref: "mod.lean.show-translation") {
     #urlbar:hover {
-      #translations-button {
+      #translations-button, #translations-button-circle-arrows:not([hidden="true"]), #translations-button-locale:not([hidden]) {
         display: inherit !important;
-      }
+      }  
     }
     #translations-button {
       transition: all 0.1s ease !important;
+    }
+    & #translation-button:not([open]) {
+      margin-inline-start: calc(-8px - 2 * var(--urlbar-icon-padding));
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    #urlbar:hover #translations-button {
+      opacity: 1 !important;
+      margin-inline-start: 0 !important;
+      transform: none !important;
+      display: flex;
     }
   }
 }
