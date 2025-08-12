@@ -153,9 +153,19 @@
 :root[zen-single-toolbar='true'] {
   @media (-moz-bool-pref: "mod.lean.show-translation") {
     #urlbar:hover {
-      #translations-button, #translations-button-circle-arrows:not([hidden="true"]), #translations-button-locale:not([hidden]) {
-        display: inherit !important;
-      }  
+      #translations-button {
+        display: inherit !important; 
+      }
+      #translations-button {
+        &[hidden="true"] {
+          #translations-button-circle-arrows, #translations-button-locale {
+            visibility: collapse !important;
+          }
+          #translations-button-icon {
+            visibility: visible !important;
+          }
+        }
+      }
     }
     #translations-button {
       transition: all 0.1s ease !important;
