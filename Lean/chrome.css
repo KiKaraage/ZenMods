@@ -235,7 +235,8 @@
     #zen-sidebar-foot-buttons, #zen-workspaces-button, #zen-sidebar-foot-buttons toolbarbutton {
       transition: ease 0.2s !important;
     }
-    #titlebar:not(:hover) {
+    /* Use navigator toolbox hover state to avoid interfering with window controls hitbox. */
+    #navigator-toolbox:not(:hover) {
       zen-workspace {
         & > arrowscrollbox {
           &[overflowing] {
@@ -316,7 +317,7 @@
 /* Part A: When bottom buttons is always shown */
 @media -moz-pref("mod.lean.pinned-ext") {
   #main-window[zen-single-toolbar="true"] {
-    #titlebar {
+    #navigator-toolbox {
       zen-workspace {
         & > arrowscrollbox {
           &[overflowing] {
