@@ -21,14 +21,13 @@
         "type": "checkbox"
     },
     {
-        "property": "uc.fixcontext.restoreicons",
-        "label": "🔣 Restore back all icons",
+        "property": "uc.hidecontext.icons",
+        "label": "🧩 Hide icons (except checkboxes, radio buttons and navigation buttons)",
         "type": "checkbox"
     },
     {
-        "property": "uc.hidecontext.exticons",
-        "label": "🧩 Hide icons for extensions options (enabled by default)",
-        "defaultValue": "true",
+        "property": "uc.fixcontext.restoreicons",
+        "label": "🔣 Restore back all icons",
         "type": "checkbox"
     },
     {
@@ -48,25 +47,28 @@
         "type": "checkbox"
     },
     {
+        "property": "uc.hidecontext.navigation",
+        "label": "🌐 Hide 'Back', 'Forward', 'Reload' & 'Bookmark Page' options",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.zenlink",
+        "label": "🔗 Hide Zen's 'Open Link in Split View' & 'Open Link in Glance'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.openlinkextra",
+        "label": "🔗 Hide Firefox's 'Open Link in Split View', 'Open Link in Smart Window' & 'Preview Link'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.openlinkwindow",
+        "label": "🔗 Hide 'Open Link in New Window' & 'Open Link in New Private Window'",
+        "type": "checkbox"
+    },
+    {
         "property": "uc.hidecontext.bookmark",
         "label": "📑 🔗 Hide 'Bookmark Tab/Tabs/Link' options (enabled by default)",
-        "defaultValue": "true",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.mutetab",
-        "label": "📑 Hide 'Mute Tab' options",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.newtab",
-        "label": "📑 Hide 'New Tab' & 'New Tab Below' (enabled by default)",
-        "defaultValue": "true",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.movetaboptions",
-        "label": "📑 Hide 'Move Tab' options (enabled by default)",
         "defaultValue": "true",
         "type": "checkbox"
     },
@@ -81,30 +83,24 @@
         "type": "checkbox"
     },
     {
-        "property": "uc.hidecontext.closetab",
-        "label": "📑 Hide 'Close Tab' & 'Close Duplicate Tabs'",
-        "type": "checkbox"
-    },
-        {
-        "property": "uc.hidecontext.closemultiple",
-        "label": "📑 Hide 'Close Multiple Tabs' options (enabled by default)",
-        "defaultValue": "true",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.askchatbot",
-        "label": "📑 🌐 🔤 🔗 Hide 'Ask AI chatbot' options if you enabled the feature",
-        "type": "checkbox"
-    },
-    {
         "property": "uc.hidecontext.search",
         "label": "🔤 🔗 Hide 'Search Web for Selected Text/Link' options",
         "type": "checkbox"
     },
     {
         "property": "uc.hidecontext.searchinpriv",
-        "label": "🔤🔗 Hide 'Search in a Private Window' (enabled by default)",
+        "label": "🔤 🔗 Hide 'Search in a Private Window' (enabled by default)",
         "defaultValue": "true",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.visualsearch",
+        "label": "🖼️ Hide 'Search Image with …' & 'Copy Text from Image'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.addengine",
+        "label": "🌐 Hide 'Add Search Engine'",
         "type": "checkbox"
     },
     {
@@ -113,9 +109,19 @@
         "type": "checkbox"
     },
     {
+        "property": "uc.hidecontext.askchatbot",
+        "label": "📑 🌐 🔤 🔗 Hide 'Ask AI chatbot' / 'Summarize Page' options if you enabled the feature",
+        "type": "checkbox"
+    },
+    {
         "property": "uc.hidecontext.printselection",
         "label": "🔤 Hide 'Print Selection' (enabled by default)",
         "defaultValue": "true",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.highlight",
+        "label": "🔤 Hide 'Copy Link to Highlight' & 'Remove Highlight' options",
         "type": "checkbox"
     },
     {
@@ -134,31 +140,14 @@
         "type": "checkbox"
     },
     {
+        "property": "uc.hidecontext.passwords",
+        "label": "⌨️ Hide 'Fill Password', 'Use Relay Mask', 'Manage Passwords' & 'Reveal Password' in text fields",
+        "type": "checkbox"
+    },
+    {
         "property": "uc.hidecontext.selectalltext",
         "label": "🌐 🔤 Hide 'Select All Text' option (enabled by default)",
         "defaultValue": "true",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.selectalltabs",
-        "label": "📑 Hide 'Select All Tabs' (enabled by default)",
-        "defaultValue": "true",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.reloadtab",
-        "label": "📑 Hide 'Reload Tab' (enabled by default)",
-        "defaultValue": "true",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.duplicatetab",
-        "label": "📑 Hide 'Duplicate Tab'",
-        "type": "checkbox"
-    },
-    {
-        "property": "uc.hidecontext.unloadactions",
-        "label": "📑 Hide 'Tab Unload'",
         "type": "checkbox"
     },
     {
@@ -182,13 +171,113 @@
         "type": "checkbox"
     },
     {
+        "property": "uc.hidecontext.newtab",
+        "label": "📑 Hide 'New Tab' & 'New Tab Below' (enabled by default)",
+        "defaultValue": "true",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.movetofolder",
+        "label": "📑 Hide Zen's 'Move to Folder'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.tabgroups",
+        "label": "📑 Hide Firefox tab group options ('Add Tab to New Group', 'Move Tab to Group', 'Remove from Group')",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.splitview",
+        "label": "📑 Hide 'Split Tabs' & 'Share Split View' options",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.reloadtab",
+        "label": "📑 Hide 'Reload Tab' (enabled by default)",
+        "defaultValue": "true",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.mutetab",
+        "label": "📑 Hide 'Mute Tab' options",
+        "type": "checkbox"
+    },
+    {
         "property": "uc.hidecontext.pin",
         "label": "📑 Hide 'Pin Tab' & 'Add to Essentials' options",
         "type": "checkbox"
     },
     {
-        "property": "uc.hidecontext.navigation",
-        "label": "🌐 Hide 'Back', 'Forward', 'Reload' & 'Bookmark Page' options",
+        "property": "uc.hidecontext.edittab",
+        "label": "📑 Hide Zen's 'Rename Tab' & 'Change Tab Icon'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.editpinned",
+        "label": "📑 Hide Zen's 'Edit Pinned Page' & 'Reset Pinned Tab' options",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.unloadactions",
+        "label": "📑 Hide 'Unload Tab'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.duplicatetab",
+        "label": "📑 Hide 'Duplicate Tab'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.tabnotes",
+        "label": "📑 Hide 'Add Note' & 'Edit Note'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.movetaboptions",
+        "label": "📑 Hide 'Move Tab' options, including Zen's move-to-space entries (enabled by default)",
+        "defaultValue": "true",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.selectalltabs",
+        "label": "📑 Hide 'Select All Tabs' (enabled by default)",
+        "defaultValue": "true",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.sharetabs",
+        "label": "📑 Hide 'Share Tabs'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.closetab",
+        "label": "📑 Hide 'Close Tab' & 'Close Duplicate Tabs'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.closemultiple",
+        "label": "📑 Hide 'Close Multiple Tabs' options (enabled by default)",
+        "defaultValue": "true",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.undoclose",
+        "label": "📑 Hide 'Reopen Closed Tab'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.spacerouting",
+        "label": "📑 Hide Zen's 'Add domain to Space Routing'",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.tabextensions",
+        "label": "📑 🧩 Hide extension items (e.g. 1Password) in tab context menu",
+        "type": "checkbox"
+    },
+    {
+        "property": "uc.hidecontext.compactmode",
+        "label": "🧰 Hide Zen's 'Compact Mode' submenu on toolbar context menu",
         "type": "checkbox"
     }
 ]

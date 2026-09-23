@@ -1,6 +1,6 @@
-/* Zen Context Menu v3.0 by KiKaraage */
+/* Zen Context Menu v4.0 by KiKaraage, in sync with Zen 1.22.3b (Firefox 156) */
 
-/* Fix ergonomics for tab context menu by applying some reorderings 
+/* Fix ergonomics for tab context menu by applying some reorderings
  * plus hiding disabled options and some separators
  * Applied by default when enabling Zen Context Menu mod */
 @media -moz-pref("uc.fixcontext.ergonomicsfortabs") {
@@ -21,33 +21,32 @@
     #context_unloadTab {
       order: -7 !important;
     }
-    :nth-child(5) {
+    #context_tabStateSeparator {
       order: -6 !important;
     }
+    #context_zenMoveToFolder,
     #context_moveTabToGroup,
     #context_reopenInContainer,
-    #context-zen-change-workspace-tab {
+    #context_moveTabOptions {
       order: -5 !important;
     }
-    :nth-child(32) {
+    #context_tabToolsSeparator {
       order: -4 !important;
     }
-    #context_zenSplitTabs,
     #context_undoCloseTab {
       order: -3 !important;
-    } 
+    }
     #context_closeTab,
     #context_closeTabOptions,
     #context_closeDuplicateTabs,
     #context_zen-reset-pinned-tab,
-    #context_zen-replace-pinned-url-with-current {
+    #context_zen-edit-pinned-page {
       order: 2;
     }
-    #context_zenSplitTabs[label="Split Tab (multiple selected tabs needed)"],
     #context_zenSplitTabs[disabled="true"],
     #context_closeDuplicateTabs[disabled],
     #context_zen-pinned-tab-separator,
-    :nth-child(28), :nth-child(43) {
+    #context_openAndOrganizeSeparator {
       display: none;
     }
   }
@@ -136,7 +135,9 @@
   }
 }
 
-/* Prioritize “Copy Clean Link" when available, otherwise, only show "Copy Link” */
+/* ===================== Page / link / selection context menu ===================== */
+
+/* Prioritize "Copy Clean Link" when available, otherwise, only show "Copy Link" */
 @media -moz-pref("uc.hidecontext.copylink") {
   #contentAreaContextMenu:has(#context-stripOnShareLink[disabled="false"]) {
     #context-copylink {
@@ -147,7 +148,35 @@
     display: none !important;
   }
 }
-/* Hide "Bookmark Tab/Link” */
+/* Hide top buttons (Back, Forward, Reload, Bookmark Page) on page context menu */
+@media -moz-pref("uc.hidecontext.navigation") {
+  #context-navigation, #context-sep-navigation {
+    display: none !important;
+  }
+}
+/* Hide Zen's "Open Link in Split View" and "Open Link in Glance" */
+@media -moz-pref("uc.hidecontext.zenlink") {
+  #context-zenSplitLink,
+  #context-zenOpenLinkInGlance {
+    display: none !important;
+  }
+}
+/* Hide Firefox's "Open Link in Split View", "Open Link in Smart Window" and "Preview Link" */
+@media -moz-pref("uc.hidecontext.openlinkextra") {
+  #context-openlinkinsplitview,
+  #context-openlinksmartwindow,
+  #context-previewlink {
+    display: none !important;
+  }
+}
+/* Hide "Open Link in New Window" and "Open Link in New Private Window" */
+@media -moz-pref("uc.hidecontext.openlinkwindow") {
+  #context-openlink,
+  #context-openlinkprivate {
+    display: none !important;
+  }
+}
+/* Hide "Bookmark Tab/Link" */
 @media -moz-pref("uc.hidecontext.bookmark") {
   #toolbar-context-bookmarkSelectedTab,
   #toolbar-context-bookmarkSelectedTabs,
@@ -157,91 +186,80 @@
     display: none !important;
   }
 }
-/* Hide "Mute Tab" option */
-@media -moz-pref("uc.hidecontext.mutetab") {
-  #context_toggleMuteTab,
-  #context_toggleMuteSelectedTabs,
-  #context_playTab,
-  #context_playSelectedTabs {
-    display: none !important;
-  }
-}
-/* Hide "New Tab" options */
-@media -moz-pref("uc.hidecontext.newtab") {
-  #context_openANewTab,
-  #toolbar-context-openANewTab,
-  #toolbarNavigatorItemsMenuSeparator {
-    display: none !important;
-  }
-}
-
-/* Hide "Move Tab" options */
-@media -moz-pref("uc.hidecontext.movetaboptions") {
-  #context_moveTabOptions {
-    display: none !important;
-  }
-}
-/* Hide “Open Tab/Link in New Container Tab” */
+/* Hide "Open Tab/Link in New Container Tab" */
 @media -moz-pref("uc.hidecontext.newcontainer") {
   #context_reopenInContainer,
   #context-openlinkinusercontext-menu {
     display: none !important;
   }
 }
-/* Hide “Send Tab/Link to Device” */
+/* Hide "Send Tab/Link to Device" */
 @media -moz-pref("uc.hidecontext.sendtodevice") {
   #context_sendTabToDevice,
+  #context_sendTabToDeviceSeparator,
   #context-sendpagetodevice,
   #context-sendlinktodevice,
-  #context-sep-sendlinktodevice {
+  #context-sep-sendlinktodevice,
+  #context-sep-sendpagetodevice {
     display: none !important;
   }
 }
-/* Hide "Close Tabs" & "Close Duplicate Tabs"*/
-@media -moz-pref("uc.hidecontext.closetab") {
-  #context_closeTab,
-  #context_closeDuplicateTabs {
-    display: none !important;
-  }
-}
-/* Hide "Close Multiple Tabs" */
-@media -moz-pref("uc.hidecontext.closemultiple") {
-  #context_closeTabOptions {
-    display: none !important;
-  }
-}
-/* Hide “Search Keywords" with your preferred search engine */
+/* Hide "Search Keywords" with your preferred search engine */
 @media -moz-pref("uc.hidecontext.search") {
   #context-searchselect {
     display: none !important;
   }
 }
-/* Hide “Search Keywords in a Private Window” */
+/* Hide "Search Keywords in a Private Window" */
 @media -moz-pref("uc.hidecontext.searchinpriv") {
   #context-searchselect-private {
     display: none !important;
   }
 }
+/* Hide "Search Image with ..." (visual search) and "Copy Text from Image" */
+@media -moz-pref("uc.hidecontext.visualsearch") {
+  #context-visual-search,
+  #context-imagetext {
+    display: none !important;
+  }
+}
+/* Hide "Add Search Engine" */
+@media -moz-pref("uc.hidecontext.addengine") {
+  #context-add-engine {
+    display: none !important;
+  }
+}
 /* Hide "Translate Selection/Link" options */
 @media -moz-pref("uc.hidecontext.translate") {
-  #context-translate-selection,
-  #frame-sep {
+  #context-translate-selection {
     display: none !important;
   }
 }
-/* Hide "Ask AI chatbot" options */
+/* Hide "Ask AI chatbot" options (page, selection, and tab context menu) */
 @media -moz-pref("uc.hidecontext.askchatbot") {
-  #context-ask-chat {
+  #context-ask-chat,
+  #context_askChat,
+  #context_askChatSummarize,
+  #context_aiSeparator {
     display: none !important;
   }
 }
-/* Hide "Print Selection” */
+/* Hide "Print Selection" */
 @media -moz-pref("uc.hidecontext.printselection") {
   #context-print-selection {
     display: none !important;
   }
 }
-/* Hide “Email Image”, “Set Image as Desktop Background”, and “View Image Info” options */
+/* Hide "Copy Link to Highlight", "Copy Clean Link to Highlight" and "Remove Highlight" */
+@media -moz-pref("uc.hidecontext.highlight") {
+  #context-copy-link-to-highlight,
+  #context-copy-clean-link-to-highlight,
+  #context-remove-highlight,
+  #context-sep-highlights {
+    display: none !important;
+  }
+}
+/* Hide "Email Image", "Set Image as Desktop Background", and "View Image Info" options */
 @media -moz-pref("uc.hidecontext.image") {
   #context-sendimage,
   #context-sep-setbackground,
@@ -273,11 +291,21 @@
     display: none !important;
   }
 }
+/* Hide password items in text fields ("Fill Password", "Use Relay Mask", "Manage Passwords", "Reveal Password") */
+@media -moz-pref("uc.hidecontext.passwords") {
+  #fill-login,
+  #fill-login-generated-password,
+  #use-relay-mask,
+  #manage-saved-logins,
+  #passwordmgr-items-separator,
+  #context-reveal-password {
+    display: none !important;
+  }
+}
 /* Hide "Take Screenshot" option */
 @media -moz-pref("uc.hidecontext.screenshot") {
   #context-take-screenshot,
-  #context-sep-screenshots,
-  #frame-sep {
+  #context-sep-screenshots {
     display: none !important;
   }
 }
@@ -287,40 +315,14 @@
     display: none !important;
   }
 }
-/* Hide “Select All Text” option */
+/* Hide "Select All Text" option */
 @media -moz-pref("uc.hidecontext.selectalltext") {
   #context-selectall,
   #context-sep-selectall {
     display: none !important;
   }
 }
-/* Hide “Select All Tabs" option */
-@media -moz-pref("uc.hidecontext.selectalltabs") {
-  #context_selectAllTabs,
-  #context_selectedAllTabs,
-  #toolbar-context-selectAllTabs,
-  #tabContextMenu > :nth-child(28) {
-    display: none !important;
-  }
-}
-/* Hide “Reload Tab” option */
-@media -moz-pref("uc.hidecontext.reloadtab") {
-  #context_reloadTab,
-  #context_reloadSelectedTabs,
-  #toolbar-context-reloadSelectedTab,
-  #toolbar-context-reloadSelectedTabs {
-    display: none !important;
-  }
-}
-/* Hide "Duplicate Tab" */
-@media -moz-pref("uc.hidecontext.duplicatetab") {
-  #context_duplicateTab,
-  #context_duplicateTabs,
-  #tabContextMenu > :nth-child(21) {
-    display: none !important;
-  }
-}
-/* Hide “View Page Source”, "View Selection Source" and “Inspect” options */
+/* Hide "View Page Source", "View Selection Source" and "Inspect" options */
 @media -moz-pref("uc.hidecontext.inspect") {
   #context-viewsource,
   #context-inspect-a11y,
@@ -331,10 +333,65 @@
     display: none !important;
   }
 }
-/* Hide “Save Page As and Save Link As” */
+/* Hide "Save Page As and Save Link As" */
 @media -moz-pref("uc.hidecontext.savelink") {
   #context-savepage,
   #context-savelink {
+    display: none !important;
+  }
+}
+
+/* ===================== Tab context menu ===================== */
+
+/* Hide "New Tab" options */
+@media -moz-pref("uc.hidecontext.newtab") {
+  #context_openANewTab,
+  #toolbar-context-openANewTab,
+  #toolbarNavigatorItemsMenuSeparator {
+    display: none !important;
+  }
+}
+/* Hide Zen's "Move to Folder" */
+@media -moz-pref("uc.hidecontext.movetofolder") {
+  #context_zenMoveToFolder {
+    display: none !important;
+  }
+}
+/* Hide Firefox tab group options ("Add Tab to New Group", "Move Tab to Group", "Remove from Group") */
+@media -moz-pref("uc.hidecontext.tabgroups") {
+  #context_moveTabToNewGroup,
+  #context_moveSplitViewToNewGroup,
+  #context_moveTabToGroup,
+  #context_ungroupTab,
+  #context_ungroupSplitView {
+    display: none !important;
+  }
+}
+/* Hide split view options (Zen's "Split Tabs" / "Share Split View" and Firefox's split view items) */
+@media -moz-pref("uc.hidecontext.splitview") {
+  #context_zenSplitTabs,
+  #context_zenShareSplitView,
+  #context_moveTabToSplitView,
+  #context_separateSplitView,
+  #context_reverseSplitView {
+    display: none !important;
+  }
+}
+/* Hide "Reload Tab" option */
+@media -moz-pref("uc.hidecontext.reloadtab") {
+  #context_reloadTab,
+  #context_reloadSelectedTabs,
+  #toolbar-context-reloadSelectedTab,
+  #toolbar-context-reloadSelectedTabs {
+    display: none !important;
+  }
+}
+/* Hide "Mute Tab" option */
+@media -moz-pref("uc.hidecontext.mutetab") {
+  #context_toggleMuteTab,
+  #context_toggleMuteSelectedTabs,
+  #context_playTab,
+  #context_playSelectedTabs {
     display: none !important;
   }
 }
@@ -349,13 +406,107 @@
     display: none !important;
   }
 }
-/* Hide top buttons (Back, Forward, Reload, Bookmark Page) on page context menu */
-@media -moz-pref("uc.hidecontext.navigation") {
-  #context-navigation, #context-sep-navigation {
+/* Hide Zen's "Rename Tab" and "Change Tab Icon" */
+@media -moz-pref("uc.hidecontext.edittab") {
+  #context_zen-edit-tab-title,
+  #context_zen-edit-tab-icon {
+    display: none !important;
+  }
+}
+/* Hide Zen's pinned tab options ("Edit Pinned Page" submenu, "Reset Pinned Tab") */
+@media -moz-pref("uc.hidecontext.editpinned") {
+  #context_zen-pinned-tab-separator,
+  #context_zen-edit-pinned-page,
+  #context_zen-reset-pinned-tab {
+    display: none !important;
+  }
+}
+/* Hide "Unload Tab" */
+@media -moz-pref("uc.hidecontext.unloadactions") {
+  #context_unloadTab {
+    display: none !important;
+  }
+}
+/* Hide "Duplicate Tab" */
+@media -moz-pref("uc.hidecontext.duplicatetab") {
+  #context_duplicateTab,
+  #context_duplicateTabs {
+    display: none !important;
+  }
+}
+/* Hide "Add Note" / "Edit Note" */
+@media -moz-pref("uc.hidecontext.tabnotes") {
+  #context_addNote,
+  #context_editNote {
+    display: none !important;
+  }
+}
+/* Hide "Move Tab" options (also holds Zen's "move to space" entries) */
+@media -moz-pref("uc.hidecontext.movetaboptions") {
+  #context_moveTabOptions {
+    display: none !important;
+  }
+}
+/* Hide "Select All Tabs" option */
+@media -moz-pref("uc.hidecontext.selectalltabs") {
+  #context_selectAllTabs,
+  #toolbar-context-selectAllTabs,
+  #context_tabToolsSeparator {
+    display: none !important;
+  }
+}
+/* Hide "Share Tabs" (macOS shows this as a "Share" submenu, .share-tab-url-item) */
+@media -moz-pref("uc.hidecontext.sharetabs") {
+  #context_shareSelectedTabs,
+  #context_shareSelectedTabsSeparator,
+  #tabContextMenu > .share-tab-url-item {
+    display: none !important;
+  }
+}
+/* Hide "Close Tabs" & "Close Duplicate Tabs"*/
+@media -moz-pref("uc.hidecontext.closetab") {
+  #context_closeTab,
+  #context_closeDuplicateTabs {
+    display: none !important;
+  }
+}
+/* Hide "Close Multiple Tabs" */
+@media -moz-pref("uc.hidecontext.closemultiple") {
+  #context_closeTabOptions {
+    display: none !important;
+  }
+}
+/* Hide "Reopen Closed Tab" */
+@media -moz-pref("uc.hidecontext.undoclose") {
+  #context_undoCloseTab,
+  #toolbar-context-undoCloseTab {
+    display: none !important;
+  }
+}
+/* Hide Zen's "Add domain to Space Routing" */
+@media -moz-pref("uc.hidecontext.spacerouting") {
+  #context_zen-add-domain-to-routing {
     display: none !important;
   }
 }
 
+/* Hide extension items (e.g. 1Password) in the tab context menu.
+ * Extension items get ids like "<ext-id>-menuitem-<n>"; the separator before them has no id. */
+@media -moz-pref("uc.hidecontext.tabextensions") {
+  #tabContextMenu > [id*="-menuitem-"],
+  #tabContextMenu > menuseparator:has(+ [id*="-menuitem-"]) {
+    display: none !important;
+  }
+}
+
+/* ===================== Toolbar context menu ===================== */
+
+/* Hide Zen's "Compact Mode" submenu */
+@media -moz-pref("uc.hidecontext.compactmode") {
+  #zen-context-menu-compact-mode {
+    display: none !important;
+  }
+}
 
 /* Restore back context menu icons pre-1.12.9b */
 /* I'm not guaranteeing there will be icons for future context menu options */
@@ -457,16 +608,8 @@
   #context_zenSplitTabs {
     --menu-image: url('chrome://browser/skin/zen-icons/sidebars-right.svg') !important;
   }
-  #context-zen-change-workspace-tab {
-    --menu-image: url('chrome://browser/skin/zen-icons/move-tab.svg') !important;
-  }
   #context-zenSplitLink {
     --menu-image: url('chrome://browser/skin/zen-icons/split.svg') !important;
-  }
-  
-  #context_zenOpenWorkspace,
-  #context_zenOpenWorkspacePanel {
-    --menu-image: url('chrome://browser/skin/zen-icons/manage.svg') !important;
   }
   #context_zenEditWorkspaceIcon {
     --menu-image: url('chrome://browser/skin/zen-icons/canvas.svg') !important;
@@ -519,8 +662,7 @@
   .textbox-contextmenu menuitem[cmd*='cut'],
   #placesContext_cut {
     --menu-image: url('chrome://browser/skin/zen-icons/edit-cut.svg');
-  }
-  #context-delete,
+  }#context-delete,
   .customize-context-removeExtension,
   .unified-extensions-context-menu-remove-extension,
   .textbox-contextmenu menuitem[cmd*='delete'],
@@ -529,7 +671,6 @@
   menuitem[id='placesContext_delete'],
   menuitem[id='placesContext_delete_history'],
   menuitem[id='placesContext_deleteHost'],
-  #context_zenDeleteWebPanel,
   #context_zenDeleteWorkspace {
     --menu-image: url('chrome://browser/skin/zen-icons/edit-delete.svg');
   }
@@ -578,12 +719,10 @@
   }
   #context-copyimage-contents {
     --menu-image: url('chrome://browser/skin/zen-icons/image-copy.svg');
-  }
-  #context-copyimage,
+  }#context-copyimage,
   #context-copyvideourl,
   #context-copylink,
   #context-stripOnShareLink,
-  #context_zenOpenNewTabWebPanel,
   #context-pdfjs-copy {
     --menu-image: url('chrome://browser/skin/zen-icons/link.svg');
   }
@@ -622,11 +761,9 @@
   #context_sendTabToDevice,
   #context-sendpagetodevice {
     --menu-image: url('chrome://browser/skin/zen-icons/send-to-device.svg');
-  }
-  #context-openlinkintab,
+  }#context-openlinkintab,
   #context-openlinkincontainertab,
   #context_zenWorkspacesOpenInContainerTab,
-  #context_zenWebPanelContextInContainer,
   menuitem[id='placesContext_open:newtab'],
   menuitem[id='placesContext_openLinks:tabs'],
   menuitem[id='placesContext_openBookmarkLinks:tabs'],
@@ -666,17 +803,13 @@
   }
   #context-media-pause {
     --menu-image: url('chrome://browser/skin/zen-icons/media-pause.svg');
-  }
-  #context-media-mute,
+  }#context-media-mute,
   #context_toggleMuteTab,
-  #context_toggleMuteSelectedTabs,
-  #context_zenToggleMuteWebPanel {
+  #context_toggleMuteSelectedTabs {
     --menu-image: url('chrome://browser/skin/zen-icons/media-mute.svg');
-  }
-  #context-media-unmute,
+  }#context-media-unmute,
   #context_toggleMuteTab[muted],
-  #context_toggleMuteSelectedTabs[muted],
-  #context_zenToggleMuteWebPanel[muted] {
+  #context_toggleMuteSelectedTabs[muted] {
     --menu-image: url('chrome://browser/skin/zen-icons/media-unmute.svg');
   }
   #context-media-playbackrate {
@@ -710,12 +843,7 @@
   .customize-context-removeFromToolbar {
     --menu-image: url('chrome://browser/skin/zen-icons/unpin.svg');
   }
-  #zen-sidebar-web-panel-pinned[pinned='true'] {
-    list-style-image: url('chrome://browser/skin/zen-icons/pin.svg') !important;
-  }
-  #zen-sidebar-web-panel-pinned {
-    list-style-image: url('chrome://browser/skin/zen-icons/unpin.svg') !important;
-  }
+
   #context_duplicateTab,
   #context_duplicateTabs {
     --menu-image: url('chrome://browser/skin/zen-icons/duplicate-tab.svg');
@@ -755,10 +883,6 @@
   #context_zenEditWorkspace {
     --menu-image: url('chrome://browser/skin/zen-icons/plus.svg');
   }
-  #context-savelinktopocket,
-  #context-pocket {
-    --menu-image: url('chrome://browser/skin/zen-icons/pocket-outline.svg');
-  }
   #context_ungroupTab,
   #context_moveTabOptions {
     --menu-image: url('chrome://browser/skin/zen-icons/move-tab.svg');
@@ -777,9 +901,7 @@
   }
   #context_closeTabOptions {
     --menu-image: url('chrome://browser/skin/zen-icons/close-all.svg');
-  }
-  #context_unloadTab,
-  #context_zenTabActions {
+  }#context_unloadTab {
     --menu-image: url('chrome://browser/skin/zen-icons/close-all.svg');
   }
   .customize-context-reportExtension,
@@ -805,19 +927,16 @@
       --zen-cmenu-icon-size: 16px !important;
     }
 
-
     menupopup > menuitem > .menu-icon,
     menupopup > menu > .menu-icon {
 
       width: var(--zen-cmenu-icon-size);
       height: var(--zen-cmenu-icon-size);
 
-
       margin-inline-start: var(--zen-cmenu-icon-margin-inline-start);
       margin-inline-end: var(--zen-cmenu-icon-margin-inline-end);
       margin-block-start: var(--zen-cmenu-icon-margin-block);
       margin-block-end: var(--zen-cmenu-icon-margin-block);
-
 
       padding: 0 !important;
     }
