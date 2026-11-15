@@ -22,7 +22,7 @@
     },
     {
         "property": "uc.fixcontext.restoreicons",
-        "label": "🔣 Restore back all icons",
+        "label": "🔣 Restore all icons",
         "type": "checkbox"
     },
     {
